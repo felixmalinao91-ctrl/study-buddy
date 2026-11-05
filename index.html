@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Buddy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f4ff;
+      margin: 0;
+      padding: 25px;
+      color: #24345c;
+    }
+    header {
+      background: #4169e1;
+      color: white;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 15px;
+    }
+    button {
+      background: #4169e1;
+      color: white;
+      border: 0;
+      padding: 12px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    input {
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Study Buddy</h1>
+  <p>Your Smart Companion for Learning</p>
+</header>
+
+<div class="card">
+  <h2>Upload Your Learning Materials</h2>
+  <input type="file" id="fileInput"
+    accept=".pdf,.doc,.docx,.ppt,.pptx,.txt">
+  <p id="status">Choose a lesson file to get started.</p>
+  <button onclick="uploadFile()">Upload File</button>
+</div>
+
+<div class="card">
+  <h2>My Learning Dashboard</h2>
+  <p>Welcome to Study Buddy!</p>
+  <p>Start organizing your lessons and study materials.</p>
+</div>
+
+<script>
+function uploadFile() {
+  const file = document.getElementById("fileInput").files[0];
+
+  if (!file) {
+    alert("Please select a file first.");
+    return;
+  }
+
+  document.getElementById("status").textContent =
+    "Selected: " + file.name;
+}
+</script>
+
+</body>
+</html>
