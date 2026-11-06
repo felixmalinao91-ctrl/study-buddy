@@ -1,1 +1,68 @@
+# Study Buddy
 
+**Your Smart Companion for Learning.**
+
+A responsive AI-powered study website with lesson generation, interactive flashcards, and multiple-choice quizzes.
+
+## Requirements
+
+- Node.js 18+
+- An OpenAI API key with API access and available billing/usage
+
+## Run locally
+
+1. Open this folder in VS Code or another code editor.
+2. Open a terminal in this folder and install packages:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a file named `.env` in the project root:
+
+   ```env
+   OPENAI_API_KEY=your_api_key_here
+   OPENAI_MODEL=gpt-4.1-mini
+   PORT=3000
+   ```
+
+4. Start the website:
+
+   ```bash
+   npm start
+   ```
+
+5. Open **http://localhost:3000** in your browser.
+
+## Important security notes
+
+- Never put your OpenAI API key in `public/index.html` or any browser JavaScript.
+- Keep `.env` private. Do not upload it to GitHub.
+- Before public deployment, configure the environment variable in your hosting provider's server settings.
+- Add authentication, rate limiting, request logging, and usage limits before allowing unrestricted public access. This starter includes basic input validation but is not a production abuse-prevention system.
+- An API key is separate from a ChatGPT subscription and API usage may incur charges.
+
+## Project structure
+
+```text
+study-buddy/
+├── public/
+│   └── index.html
+├── server.js
+├── package.json
+├── .env.example
+└── .gitignore
+```
+
+## What works
+
+- Responsive dashboard and subject/topic form
+- English and Filipino generation options
+- Beginner, Intermediate, and Advanced levels
+- AI-generated lesson explanations, definitions, concepts, examples, and summary
+- Click-to-flip flashcards with previous/next controls
+- Multiple-choice quiz, answer checking, explanations, and final score
+- Loading and error messages
+- API key kept on the server
+
+Generated content depends on the AI model and should be checked against trusted class materials.
